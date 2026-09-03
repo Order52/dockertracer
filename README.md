@@ -1,4 +1,4 @@
-# DockerTracer Betaaaa 🐳
+# DockerTracer Alphaa (rn it's just a view of my docker containers, in the future it will be full emulated network service that uses very low uses and has a UI like Packet Tracer.
 
 **DockerLens Lite** is a lightweight, interactive container and network topology like Packet Tracer but with Docker tool built with **FastAPI**, **SQLAlchemy**, and **vis-network.js**. It provides an interactive network graph mapping Docker containers, their assigned IP addresses, connected Docker networks, and exposed host ports.
 
