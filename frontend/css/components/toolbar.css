@@ -1,0 +1,15 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#searchBox {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-blue);
+    background: var(--bg-panel);
+    color: var(--text-primary);
+    width: 300px;
+}

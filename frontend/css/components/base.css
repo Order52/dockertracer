@@ -1,0 +1,25 @@
+:root {
+    --bg-primary: #020617;
+    --bg-secondary: #0f172a;
+    --bg-panel: #1e293b;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-blue: #38bdf8;
+    --accent-green: #22c55e;
+    --accent-red: #ef4444;
+    --accent-orange: #f59e0b;
+    --border-color: #334155;
+}
+
+body { 
+    background: var(--bg-primary); 
+    color: var(--text-primary); 
+    font-family: sans-serif; 
+    margin: 0; 
+    padding: 25px; 
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}

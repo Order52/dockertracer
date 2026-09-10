@@ -1,12 +1,12 @@
-# DockerLens Lite 🐳
+# Dockertracer Lite 🐳
 
-**DockerLens Lite** is a lightweight, interactive container and network topology visualization tool built with **FastAPI**, **SQLAlchemy**, and **vis-network.js**. It provides an interactive network graph mapping Docker containers, their assigned IP addresses, connected Docker networks, and exposed host ports.
+**Dockertracer Lite** is a lightweight, interactive container and network topology visualization tool built with **FastAPI**, **SQLAlchemy**, and **vis-network.js**. It provides an interactive network graph mapping Docker containers, their assigned IP addresses, connected Docker networks, and exposed host ports.
 
 ---
 
 ## 📌 Project Overview
 
-DockerLens Lite combines data from two sources:
+Dockertracer Lite combines data from two sources:
 1. **Live Docker Daemon**: Automatically queries currently running Docker containers, inspecting their network settings, IP addresses, and exposed port mappings using the Docker SDK for Python.
 2. **Database Registry (SQLite)**: Stores manually registered container definitions and configurations via REST API.
 
@@ -101,7 +101,7 @@ project-train/
 │
 ├── .env.example                        # Example environment variables template
 ├── .gitignore                          # Git ignore rules
-├── dockerlens.db                       # Local SQLite database file
+├── dockertracer.db                       # Local SQLite database file
 ├── main.py                             # Project entrypoint with port checking & auto-restart
 ├── pyproject.toml                      # Project build and package metadata
 ├── requirements.txt                    # Project Python dependencies
