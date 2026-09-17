@@ -23,13 +23,19 @@ if __name__ == "__main__":
     
     if check_port_in_use(port):
         print(f"⚠️  Port {port} is already in use (the server might already be running).")
+        print("Options:")
+        print("1. Use a different port automatically")
+        print("2. Kill the existing process and restart")
+        print("3. Exit")
         try:
-            choice = input("Do you want to kill the existing process and restart? (y/N): ")
+            choice = input("Enter your choice (1/2/3) [1]: ").strip()
+            if not choice:
+                choice = '1'
         except (KeyboardInterrupt, EOFError):
             print("\nExiting...")
             sys.exit(0)
             
-        if choice.lower() == 'y':
+        if choice == '2':
             pids = get_pids_using_port(port)
             for pid in pids:
                 try:
@@ -38,6 +44,10 @@ if __name__ == "__main__":
                 except ProcessLookupError:
                     pass
             time.sleep(1) # Wait a moment for the OS to release the port
+        elif choice == '1':
+            while check_port_in_use(port):
+                port += 1
+            print(f"Using new port: {port}")
         else:
             print("Exiting...")
             sys.exit(0)

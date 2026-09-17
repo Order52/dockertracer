@@ -8,7 +8,7 @@ import os
 # Create tables
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="DockerLens Lite", version="1.0.0")
+app = FastAPI(title="Dockertracer Lite", version="1.0.0")
 
 # Mount static files
 frontend_dir = os.path.join(os.getcwd(), "frontend")
