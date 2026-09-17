@@ -1,6 +1,4 @@
-# Dockertracer Lite 🐳
 
-**Dockertracer Lite** is a lightweight, interactive container and network topology visualization tool built with **FastAPI**, **SQLAlchemy**, and **vis-network.js**. It provides an interactive network graph mapping Docker containers, their assigned IP addresses, connected Docker networks, and exposed host ports.
 
 ---
 
