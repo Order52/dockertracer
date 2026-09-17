@@ -1,66 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Docker Topology Interactive Graph</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-</head>
-<body>
-    <div class="header-container">
-        <div>
-            <h2>Docker Topology Builder</h2>
-            <p>Design your topology first. Drag images from the dock, connect them, then click Launch.</p>
-        </div>
-        <div style="display: flex; gap: 10px; align-items: center;">
-            <button id="connectBtn" style="padding: 10px 20px; background: #f59e0b; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">🔗 Connect</button>
-            <button id="deleteBtn" style="padding: 10px 20px; background: #64748b; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">🗑️ Delete</button>
-            <button id="launchBtn" style="padding: 10px 20px; background: #22c55e; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">🚀 Launch Topology</button>
-            <button id="teardownBtn" style="padding: 10px 20px; background: #ef4444; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">🛑 Teardown</button>
-            <input type="text" id="searchBox" placeholder="Find container in canvas..." />
-        </div>
-    </div>
-    
-    <div id="mynetwork"></div>
-    
-    <!-- DOCK FOR IMAGES -->
-    <div id="dock-container">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <h3>Docker Image Library (Drag & Drop)</h3>
-            <div style="display: flex; gap: 5px;">
-                <input type="text" id="pullImageName" placeholder="Search or add image..." style="padding: 5px; border-radius: 4px; border: 1px solid #475569; background: #334155; color: white;" />
-                <button id="pullImageBtn" style="padding: 5px 10px; cursor: pointer; background: #38bdf8; color: black; border: none; border-radius: 4px; font-weight: bold;">Add/Pull</button>
-            </div>
-        </div>
-        <div id="dock" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px;">
-            <!-- Images will be loaded here dynamically -->
-        </div>
-    </div>
-
-    <!-- MODAL FOR DEPLOYMENT (Now just sets properties) -->
-    <div id="deployModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" id="closeModalBtn">&times;</span>
-            <h3 id="modalTitle">Configure Container</h3>
-            <form id="deployForm">
-                <input type="hidden" id="deployImage" name="image">
-                <input type="hidden" id="nodeX" name="x">
-                <input type="hidden" id="nodeY" name="y">
-                
-                <label>Container Name (Required):</label><br>
-                <input type="text" id="deployName" required style="width:100%; margin-bottom: 10px;"><br>
-                
-                <label>Port Mappings (e.g. 8080:80, 8081:81):</label><br>
-                <input type="text" id="deployPorts" style="width:100%; margin-bottom: 10px;"><br>
-                
-                <label>Environment Vars (e.g. MYSQL_ROOT_PASSWORD=root):</label><br>
-                <input type="text" id="deployEnvs" style="width:100%; margin-bottom: 10px;"><br>
-                
-                <button type="submit" style="padding: 10px 20px;">Save to Topology</button>
-            </form>
-        </div>
-    </div>
-
-    <script type="module" src="/static/js/main.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

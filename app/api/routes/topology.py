@@ -10,7 +10,7 @@ router = APIRouter()
 def view_topology_json(service: TopologyService = Depends(get_topology_service)):
     return service.get_topology_map()
 
-@router.get("/ui", response_class=HTMLResponse)
-def view_topology_ui():
-    index_path = os.path.join(os.getcwd(), "frontend", "index.html")
-    return FileResponse(index_path)
+# @router.get("/ui", response_class=HTMLResponse)
+# def view_topology_ui():
+#     index_path = os.path.join(os.getcwd(), "frontend", "index.html")
+#     return FileResponse(index_path)
